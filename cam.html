@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standnya XII B nihh</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="cam.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="title">
+        <div class="header">
+            <h1>SAY <span>CHEESE</span> PINISI!</h1>
+            <h2>klik kemudi kapal buat capture dan jangkar buat save fotonya yaa</h2>
+        </div>
+        
+        <div class="controls">
+            <button id="takePhoto"> <img src="take photo.png"> </button>
+            <button id="saveBtn" disabled style="display: none;"> <img src="save.png"> </button>
+        </div>
+    </div>
+
+    <div class="photobooth-container" id="booth">
+        <div id="timerAll" style="display: none;">
+            <div class="timerCont"></div>
+            <div class="timer">3</div>
+        </div>
+        <canvas id="finalCanvas" width="600" height="1800"></canvas>
+        <video id="liveVideo" autoplay playsinline muted></video>
+        <img class="frame-overlay" src="Frame 1.png" alt="Frame" style="display: block;"/>
+    </div>
+
+    <script src="cam.js"></script>
+</body>
+</html>

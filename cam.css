@@ -1,0 +1,165 @@
+        @font-face {
+            font-family: 'Adirek';
+            src: url(adirek-serif-regular.woff2) format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            min-height: 100vh;
+            background-color: rgb(18, 18, 22);
+        }
+
+        .title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content:center;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: left;
+        }
+
+        h1 {
+            position: relative;
+            font-family: 'Poppins';
+            font-weight: 800;
+            font-style: normal;
+            font-size: 10rem;
+            color: #fff;
+            margin-right: 2rem;
+            margin: -1.5rem 0 -4.5rem;
+        }
+
+        h1 span {
+            text-decoration: line-through;
+            opacity: 80%;
+            font-weight: 800;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-left: .5rem;
+            color: #e1e1e1;
+            font-family: 'Adirek';
+            font-size: 3rem;
+            font-weight: 200;
+        }
+        
+        .photobooth-container {
+            position: relative;
+            width: 50vmin; 
+            max-width: 600px;
+            aspect-ratio: 600 / 1800;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(167, 167, 168, 0.2);
+            z-index: 20;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+        }
+
+        #timerAll {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            z-index: 100;
+        }
+
+        .timerCont {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 30%;
+            width: 7rem;
+            height: 7rem;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .timer {
+            text-align: center;
+            transform: translate(-50%, -50%);
+            font-size: 5rem;
+            color: #203c5f; 
+            font-family: 'Adirek';
+        }
+
+
+        #liveVideo {
+            position: absolute;
+            object-fit: cover;
+            transform: scaleX(-1);
+            z-index: 1;
+        }
+        
+        #finalCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .frame-overlay {
+            position: absolute;
+            display: block;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 20;
+        }
+
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .controls button {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            margin-bottom: 3rem;
+            cursor: pointer; 
+            font-size: 4rem;
+            font-family: 'Adirek';
+            background-color: transparent;
+            color: transparent;
+            box-shadow: none;
+            border: none;
+        }
+
+        #takePhoto {
+        transition: transform .2s;
+        }
+
+        #takePhoto:hover {
+            transform: scale(1.1);
+        }
+
+        #saveBtn {
+        transition: transform .2s;
+        }
+
+        #saveBtn:hover {
+            transform: translateY(1rem);
+        }
+
+        span:hover {
+            transform: scale(2);
+            color: aqua;
+        }
